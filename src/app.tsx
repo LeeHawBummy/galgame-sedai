@@ -10,6 +10,17 @@ export const App = () => {
     []
   )
 
+  // 1990s 不是整数字符串，会被 Object.keys 排到最后，这里强制提到最前
+  const years = useMemo(
+    () =>
+      Object.keys(animeData).sort((a, b) => {
+        if (a === "1990s") return -1
+        if (b === "1990s") return 1
+        return Number(a) - Number(b)
+      }),
+    []
+  )
+
   const wrapper = useRef<HTMLDivElement>(null)
 
   const imageToBlob = async () => {
@@ -106,7 +117,7 @@ export const App = () => {
     return `
 ${preset}
 用户Galgame观看记录：(下面的年份是Galgame发布的年份)
-${Object.keys(animeData)
+${years
   .map((year) => {
     const items = animeData[year] || []
 
@@ -133,7 +144,7 @@ ${Object.keys(animeData)
   .filter(Boolean)
   .join("\n")}
     `.trim()
-  }, [selectedAnime, promptType])
+  }, [selectedAnime, promptType, years])
 
   return (
     <>
@@ -151,7 +162,7 @@ ${Object.keys(animeData)
                 </span>
               </h1>
               <span className="shrink-0 whitespace-nowrap">
-                我看过 {selectedAnime.length}/
+                我玩过 {selectedAnime.length}/
                 {
                   Object.values(animeData).flatMap((year) => {
                     return year.map((item) => item.title).slice(0, 12)
@@ -160,7 +171,7 @@ ${Object.keys(animeData)
                 部Galgame
               </span>
             </div>
-            {Object.keys(animeData).map((year) => {
+            {years.map((year) => {
               const items = animeData[year] || []
               return (
                 <div key={year} className="flex border-b">
