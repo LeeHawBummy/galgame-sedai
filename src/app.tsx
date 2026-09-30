@@ -158,7 +158,7 @@ ${years
               <h1>
                 Galgame世代
                 <span className="ml-2 text-zinc-400 font-medium">
-                  leehawbummy.github.io/galgame-sedai/
+                  sedai.bummy.top
                 </span>
               </h1>
               <span className="shrink-0 whitespace-nowrap">
