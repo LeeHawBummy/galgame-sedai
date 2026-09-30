@@ -158,7 +158,7 @@ ${years
               <h1>
                 Galgame世代<span className="remove"> - 点击选择你看过的Galgame</span>
                 <span className="ml-2 text-zinc-400 font-medium">
-                  
+                  https://leehawbummy.github.io/galgame-sedai/
                 </span>
               </h1>
               <span className="shrink-0 whitespace-nowrap">

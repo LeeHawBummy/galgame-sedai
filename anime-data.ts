@@ -381,6 +381,20 @@ const data: Data = {
     {title: "Z.A.T.O."},
     {title: "欧尼酱ConTiNuE！"},
   ],
+   "2026":[
+    {title: "次元凸破恋战姬!!"},
+    {title: "anemoi"},
+    {title: "Relirium"},
+    {title: "融化的风花与白兔"},
+    {title: "国王恋爱"},
+    {title: "COCORO"},
+    {title: "マガルミナ"},
+    {title: "as:9-nine-"},
+    {title: "宝石少女 2nd.cut"},
+    {title: "FORTUNE×WORLD"},
+    {title: "天獄のヴィネア"},
+    {title: "ONE NIGHT AFTER"},
+  ],
 };
 
 export default data;
